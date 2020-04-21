@@ -12,6 +12,7 @@ spec:
     containers:
       - name: jenkins
         image: pawanitzone/jenkins-custom
+        imagePullPolicy: Always
         env:
           - name: JAVA_OPTS
             value: -Djenkins.install.runSetupWizard=false
@@ -23,9 +24,16 @@ spec:
         volumeMounts:
           - name: jenkins-home
             mountPath: /var/jenkins_home
+          - name: docker-sock-volume
+            mountPath: /var/run/docker.sock
+            
     volumes:
     - name: jenkins-home
       emptyDir: {}
+    - name: docker-sock-volume
+      hostPath:
+        path: /var/run/docker.sock
+        type: File
 
  replicas: 1
  selector:
