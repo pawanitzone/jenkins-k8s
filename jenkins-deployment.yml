@@ -24,7 +24,7 @@ spec:
           - name: jenkins-home
             mountPath: /var/jenkins_home
     volumes:
-      - name: jenkins-home
+    - name: jenkins-home
       emptyDir: {}
 
  replicas: 1
