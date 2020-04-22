@@ -29,7 +29,8 @@ spec:
             
     volumes:
     - name: jenkins-home
-      emptyDir: {}
+      persistentVolumeClaim:
+        claimName: jenkins-pvc
     - name: docker-sock-volume
       hostPath:
         path: /var/run/docker.sock
