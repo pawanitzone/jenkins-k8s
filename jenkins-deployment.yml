@@ -11,7 +11,7 @@ spec:
   spec:
     containers:
       - name: jenkins
-        image: pawanitzone/jenkins-custom
+        image: pawanitzone/jenkins-argocdcli:v1.4.0
         imagePullPolicy: Always
         env:
           - name: JAVA_OPTS
