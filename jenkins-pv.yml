@@ -23,7 +23,7 @@ metadata:
   
 spec:
   storageClassName: ""
-  volumeName: jenkins
+  volumeName: jenkins-pv
   accessModes:
     - ReadWriteOnce
   resources:
