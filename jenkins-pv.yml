@@ -9,7 +9,7 @@ spec:
   capacity:
     storage: 10Gi
   persistentVolumeReclaimPolicy: Retain
-  gcePersistentDisk:    //GKE Volume create
+  gcePersistentDisk:    #//GKE Volume create
     pdName: jenkins
     fsType: ext4
   #awsElasticBlockStore:                ##AWS volume add
